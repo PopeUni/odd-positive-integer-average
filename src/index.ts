@@ -1,5 +1,4 @@
 import express from 'express';
-
 import { averageOddPositiveIntegers } from './util';
 
 /**
@@ -17,9 +16,9 @@ app.post('/odd-positive-average', (req, res) => {
 
     const result: number = averageOddPositiveIntegers(data);
 
-        if(result == null)
+        if(result == 0)
         {
-            res.status(400).send("result is null");
+            res.status(400).send("no odd positive numbers in the array");
 
         }
         else
@@ -30,7 +29,7 @@ app.post('/odd-positive-average', (req, res) => {
     
  });
 
-app.listen(3000,listening);
+app.listen(4442,listening);
 
 
 function listening(){
